@@ -6,7 +6,7 @@ public interface IList<E> extends Iterable<E> {
         return add(size(), element);
     }
 
-    // O(n^2) - неэффективно, заменено
+    // O(n^2) - неэффективно
     default void clear() {
         while (!isEmpty()) {
             remove(0);
@@ -45,7 +45,7 @@ public interface IList<E> extends Iterable<E> {
 
     E remove(int index);
 
-    // O(n) - неэффективно, заменено
+    // O(n) - неэффективно
     default E set(int index, E element) {
         E res = remove(index);
         add(index, element);

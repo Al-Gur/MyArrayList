@@ -140,7 +140,7 @@ public class MyArrayList<E> implements IList<E> {
         };
     }
 
-
+    // O(n)
     @Override
     public void clear() {
         for (int i = 0; i < size; i++) {
@@ -149,6 +149,7 @@ public class MyArrayList<E> implements IList<E> {
         size = 0;
     }
 
+    // O(1)
     @Override
     public E set(int index, E element) {
         E res = (E) get(index);

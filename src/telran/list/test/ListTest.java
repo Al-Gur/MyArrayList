@@ -37,11 +37,17 @@ public class ListTest {
         assertFalse(list.contains(1));
         assertTrue(list.contains(null));
         assertEquals(list.lastIndexOf(7), 5);
-        list.remove(Integer.valueOf(5));
+        list.remove(Integer.valueOf(5)); // 2 7 3 null 7
         assertEquals(list.lastIndexOf(7),4);
-        list.remove(4);
+        list.remove(4); // 2 7 3 null
         assertEquals(list.lastIndexOf(7),1);
         assertEquals(list.get(2),3);
+        list.set(2,99); // 2 7 99 null
+        assertEquals(list.get(2),99);
+        assertEquals(list.size(),4);
+        for (Integer i: list) {
+            System.out.println(i);  // 2 7 99 null
+        }
         list.clear();
         assertEquals(list.size(),0);
         assertTrue(list.isEmpty());
